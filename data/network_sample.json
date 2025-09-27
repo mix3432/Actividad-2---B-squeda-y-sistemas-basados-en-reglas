@@ -1,0 +1,20 @@
+{
+  "estaciones": ["E1", "E2", "E3", "E4", "E5", "E6", "E7", "E8", "E9"],
+  "lineas": {
+    "L1": ["E1", "E2", "E3", "E4", "E5"],
+    "L2": ["E3", "E6", "E7"],
+    "L3": ["E5", "E8", "E9"]
+  },
+  "conexiones": [
+    {"origen": "E1", "destino": "E2", "tiempo_min": 3.0, "linea": "L1"},
+    {"origen": "E2", "destino": "E3", "tiempo_min": 2.0, "linea": "L1"},
+    {"origen": "E3", "destino": "E4", "tiempo_min": 4.0, "linea": "L1"},
+    {"origen": "E4", "destino": "E5", "tiempo_min": 3.0, "linea": "L1"},
+
+    {"origen": "E3", "destino": "E6", "tiempo_min": 5.0, "linea": "L2"},
+    {"origen": "E6", "destino": "E7", "tiempo_min": 2.0, "linea": "L2"},
+
+    {"origen": "E5", "destino": "E8", "tiempo_min": 4.0, "linea": "L3"},
+    {"origen": "E8", "destino": "E9", "tiempo_min": 3.0, "linea": "L3"}
+  ]
+}
