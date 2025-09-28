@@ -4,7 +4,7 @@ Criterio: trasbordos
 Costo total: 1.00
 Nodos explorados: 12
 
-Ruta (estaci¾n -> lÝnea usada -> costo paso):
+Ruta (estaci�n -> l�nea usada -> costo paso):
    E1  |  -   |  0.00
    E2  |  L1  |  0.00
    E3  |  L1  |  0.00
