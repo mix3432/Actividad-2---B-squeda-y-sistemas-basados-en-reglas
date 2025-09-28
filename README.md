@@ -1,25 +1,33 @@
-﻿# IA Rutas SBC
+﻿# IA Rutas SBC (Reglas + A*)
 
-Sistema inteligente basado en conocimiento + búsqueda A* para obtener rutas óptimas en un sistema de transporte masivo.
+Sistema en Python que calcula rutas en un sistema de transporte masivo usando una base de conocimiento (reglas lógicas) y búsqueda A* con tres criterios:
+- tiempo
+- estaciones
+- trasbordos
 
 ## Requisitos
-- Python 3.9+ (sin librerías externas)
+- Python 3.9+ (recomendado 3.10+)
+- (Opcional) pytest para pruebas
 
-## Ejecutar
+## Uso
 python main.py --origen E1 --destino E9 --criterio tiempo
 python main.py --origen E1 --destino E9 --criterio trasbordos
 python main.py --origen E1 --destino E9 --criterio estaciones
+
+## Resultados de ejemplo
+Salidas en texto plano (UTF-8) dentro de `docs/`:
+- docs/salida_tiempo.txt
+- docs/salida_trasbordos.txt
+- docs/salida_estaciones.txt
+- docs/salida_tests.txt  (pytest)
 
 ## Probar
 python -m pytest -q
 
 ## Estructura
-- knowledge_base.py: reglas/costos/heurística
-- search.py: A* apoyado en reglas
-- data/network_sample.json: red de ejemplo
-- tests/test_core.py: pruebas básicas
-- docs/: reporte y guion de video
-
-## Notas
-- Edita data/network_sample.json para tu sistema real.
-- Penalidades en KnowledgeBase: penalidad_trasbordo, penalidad_estacion, penalidad_trasbordo_unidades.
+- main.py  CLI
+- knowledge_base.py  reglas y heurística
+- search.py  A*
+- data/network_sample.json  red de ejemplo
+- tests/test_core.py  pruebas
+- docs/  solo resultados (`salida_*.txt`)
